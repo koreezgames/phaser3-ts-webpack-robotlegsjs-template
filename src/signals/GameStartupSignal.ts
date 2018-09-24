@@ -1,5 +1,5 @@
 import { injectable } from '@robotlegsjs/core';
-import { BaseSignal } from './BaseSignal';
+import { BaseSignal } from './';
 
 @injectable()
 export class GameStartupSignal extends BaseSignal {

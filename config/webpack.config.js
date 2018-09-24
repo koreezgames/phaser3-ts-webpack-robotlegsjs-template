@@ -58,9 +58,9 @@ const developmentConfig = merge([
 
   parts.envVar('development'),
 
-  parts.loadJs({options: {
+  parts.loadJs({ options: {
     configFile: paths.devTsConfig,
-  }}),
+  } }),
 ])
 
 const productionConfig = merge([

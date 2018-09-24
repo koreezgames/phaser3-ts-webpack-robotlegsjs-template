@@ -1,3 +1,5 @@
+// tslint:disable-next-line
+/// <reference path="../definitions/phaser.d.ts" />
 import 'reflect-metadata';
 import 'phaser';
 import { Context, MVCSBundle } from '@robotlegsjs/core';
@@ -6,10 +8,8 @@ import { RobotlegsConfig } from './config/RobotlegsConfig';
 import { SceneMediatorConfig } from './config/SceneMediatorConfig';
 import { gameConfig } from './constants/GameConfig';
 import { SceneKey } from './constants/SceneKey';
-import Boot from './scenes/Boot';
-import Main from './scenes/Main';
-import Preload from './scenes/Preload';
 import { SignalCommandMapExtension } from '@robotlegsjs/signalcommandmap';
+import { Preload, Main, Boot } from './scenes';
 
 class Game extends Phaser.Game {
   private _context: Context;

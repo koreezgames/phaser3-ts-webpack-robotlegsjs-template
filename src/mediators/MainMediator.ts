@@ -1,8 +1,8 @@
 import { inject, injectable } from '@robotlegsjs/core';
-import { GameStartupSignal } from '../events/GameStartupSignal';
 import { GameModel } from '../models/GameModel';
-import Main from '../scenes/Main';
 import { BaseSceneMediator } from './BaseSceneMediator';
+import { Main } from '../scenes';
+import { GameStartupSignal } from '../signals';
 
 @injectable()
 export class MainMediator extends BaseSceneMediator<Main> {
@@ -16,8 +16,12 @@ export class MainMediator extends BaseSceneMediator<Main> {
     this.gameStartupSignal.dispatch(Phaser.Math.Between(1000, 5000));
   }
 
+  // override
+  protected sceneCreated(): void {
+    this.addReaction(this.update);
+  }
+
   protected update(): void {
-    super.update(arguments);
     this.scene.redraw(
       this.gameModel.width,
       this.gameModel.height,

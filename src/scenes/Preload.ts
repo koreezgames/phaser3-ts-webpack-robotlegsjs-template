@@ -3,7 +3,7 @@ import { BaseScene } from './BaseScene';
 import { Atlases, Images } from '../assets';
 import { loadAtlases, loadImages } from '../assetLoader';
 
-export default class Preload extends BaseScene {
+export class Preload extends BaseScene {
   public preload(): void {
     loadAtlases(this, Atlases.Main.Atlas);
     loadImages(this, Images);

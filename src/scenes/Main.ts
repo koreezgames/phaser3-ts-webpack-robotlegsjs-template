@@ -3,7 +3,7 @@ import { gameConfig } from '../constants/GameConfig';
 import { BaseScene } from './BaseScene';
 import { Atlases, Images } from '../assets';
 
-export default class Main extends BaseScene {
+export class Main extends BaseScene {
   private ninePatch: NinePatch;
   private direction: number = 1;
 

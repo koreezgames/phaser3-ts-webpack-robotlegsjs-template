@@ -1,6 +1,6 @@
 {
   "defaultSeverity": "error",
-  "extends": ["tslint:latest"],
+  "extends": ["tslint:latest", "tslint-config-prettier"],
   "rulesDirectory": ["tslint-plugin-prettier"],
   "rules": {
     "prettier": true,
@@ -39,6 +39,7 @@
     "no-namespace": false,
     "max-classes-per-file" : false,
     "trailing-comma": false,
+    "no-unused-variable": false,
     "quotemark": [
       true,
       "single"

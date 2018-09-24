@@ -1,5 +1,5 @@
 import { injectable } from '@robotlegsjs/core';
-import Boot from '../scenes/Boot';
+import { Boot } from '../scenes';
 import { BaseSceneMediator } from './BaseSceneMediator';
 
 @injectable()
