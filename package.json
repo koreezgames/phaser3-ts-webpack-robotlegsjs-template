@@ -5,13 +5,13 @@
   "private": true,
   "license": "UNLICENSED",
   "main": "./src/Game.ts",
-  "description": "tower game",
+  "description": "phaser3 typescript webpack robotlegsjs mobx boilerplate",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/koreezgames/tower.git"
+    "url": "git+https://github.com/koreezgames/phaser3-ts-webpack-robotlegsjs-template.git"
   },
   "issues": {
-    "url": "https://github.com/koreezgames/tower/issues"
+    "url": "https://github.com/koreezgames/phaser3-ts-webpack-robotlegsjs-template/issues"
   },
   "engines": {
     "node": ">=8.11.2",
@@ -19,13 +19,11 @@
   },
   "scripts": {
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config config/webpack.config.js --env production --mode production --progress --colors",
     "stats": "webpack --config config/webpack.config.js --env production --mode production --profile --json > stats.json",
     "start": "webpack-dev-server --config config/webpack.config.js --mode development --host 0.0.0.0",
     "build-assets": "node ./scripts/generateAssetsClass.js",
-    "serve": "npm run build && serve -p 3000 -s dist",
-    "deploy": "npm run build && netlifyctl deploy"
+    "serve": "npm run build && serve -p 3000 -s dist"
   },
   "devDependencies": {
     "case-sensitive-paths-webpack-plugin": "^2.1.2",
